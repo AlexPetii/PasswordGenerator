@@ -35,18 +35,21 @@
 
       <input id="length" type="range" min="4" max="64" [(ngModel)]="length" />
 
-      <label class="option">
+      <label class="option" [class.disabled]="useApi">
         <span>Include numbers (0-9)</span>
-        <input type="checkbox" [(ngModel)]="includeNumbers" />
+
+        <input type="checkbox" [(ngModel)]="includeNumbers" [disabled]="useApi" />
       </label>
 
-      <label class="option">
+      <label class="option" [class.disabled]="useApi">
         <span>Include special characters (!@#$)</span>
-        <input type="checkbox" [(ngModel)]="includeSymbols" />
+        <input type="checkbox" [(ngModel)]="includeSymbols" [disabled]="useApi" />
       </label>
 
+      <!-- API Ninjas mode -->
       <label class="option">
         <span>Use API Ninjas</span>
+
         <input type="checkbox" [(ngModel)]="useApi" />
       </label>
     </div>

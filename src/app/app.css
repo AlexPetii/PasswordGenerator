@@ -1,4 +1,3 @@
-
 .container {
   min-height: 100vh;
   display: flex;
@@ -57,7 +56,7 @@ p {
   gap: 18px;
 }
 
-input[type="range"] {
+input[type='range'] {
   width: 100%;
   accent-color: #16a34a;
 }
@@ -90,4 +89,17 @@ input[type="range"] {
 
 .error {
   color: #dc2626;
+}
+
+.option.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.option.disabled span {
+  color: #94a3b8;
+}
+
+.option.disabled input {
+  cursor: not-allowed;
 }
