@@ -1,59 +1,67 @@
-# PasswordGenerator
+# Password Generator
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.5.
+A password generator application built with Angular and TypeScript, featuring API Ninjas integration.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- Generate secure random passwords
+- Customize password length (4–64 characters)
+- Include or exclude numbers and special characters in local mode
+- Generate passwords using API Ninjas
+- Copy generated passwords to the clipboard
+- Automatic fallback to local generation if the API is unavailable
+- Reactive interface using Angular Signals
 
-```bash
-ng serve
-```
+## Technologies
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Angular
+- TypeScript
+- HTML / CSS
+- RxJS
+- Node.js / Express
+- API Ninjas
 
-## Code scaffolding
+## Installation
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+Clone the repository:
 
 ```bash
-ng build
+git clone https://github.com/AlexPetii/PasswordGenerator.git
+cd PasswordGenerator
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Install dependencies:
 
 ```bash
-ng test
+npm install
 ```
 
-## Running end-to-end tests
+Create a `.env` file in the project root:
 
-For end-to-end (e2e) testing, run:
+```env
+API_NINJAS_KEY=your_api_key
+```
+
+Start the backend server:
 
 ```bash
-ng e2e
+node server.mjs
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+In a separate terminal, start Angular:
 
-## Additional Resources
+```bash
+ng serve --proxy-config proxy.conf.json
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Open http://localhost:4200 in your browser.
+
+## Notes
+
+- The API key is stored in `.env` and must not be committed.
+- Local password generation uses the Web Crypto API.
+- Number and symbol preferences are guaranteed in local mode.
+
+## Author
+
+Angular Password Generator Project
